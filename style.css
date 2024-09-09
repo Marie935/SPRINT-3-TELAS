@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #aa038e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 150px;
+    animation: radialGradient 3s infinite alternate;
+}
+
+h1 {
+    margin-top: 10px;
+    color: #c397e2;
+    font-size: 2em;
+}
+
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.integrante {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.integrante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.integrante img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #2c0552;
+}
+
+.plano-trabalho {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.plano-trabalho h2 {
+    margin-top: 0;
+    color: #aa038e;
+}
+
+.plano-trabalho h3 {
+    font-size: 18px;
+    color: #2c0552;
+}
+
+.plano-trabalho ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.plano-trabalho ul ul {
+    list-style-type: circle;
+}
+
+@keyframes radialGradient {
+    from {
+        background-image: radial-gradient(circle, #c397e2, #aa038e);
+    }
+    to {
+        background-image: radial-gradient(circle, #aa038e, #c397e2);
+    }
+}
+
+@media (max-width: 768px) {
+    .integrante {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .integrante {
+        width: 100%;
+    }
+
+    .plano-trabalho {
+        padding: 15px;
+    }
+}
